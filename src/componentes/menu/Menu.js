@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 // iconos
 import { CloseOutlined, MenuOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons'
 
@@ -13,7 +14,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <nav className="bg-fixed flex items-center justify-between flex-wrap bg-white p-6">
+            <nav className="flex items-center justify-between flex-wrap bg-white p-6 shadow-md">
                 <div className="flex items-center flex-shrink-0 text-gray-800 mr-6">
                     <span className="font-semibold text-xl tracking-tight">Shop!</span>
                 </div>
@@ -39,15 +40,15 @@ class Menu extends Component {
                 <div className={"w-full flex-grow lg:flex lg:items-center lg:w-auto transition " + (this.props.isOpen ? 'block ease-in-out duration-700' : 'hidden ease-in-out duration-700')}>
                     <div className="text-lg lg:flex-grow text-center lg:text-justify block lg:flex lg:justify-between">
                         <div className="lg:flex">
-                            <a href="/" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
+                            <Link to="/" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
                                 Inicio
-                            </a>
-                            <a href="/categorias" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
-                                Categoria
-                            </a>
-                            <a href="/contacto" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
+                            </Link>
+                            <Link to="/Tienda" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
+                                Tienda
+                            </Link>
+                            <Link to="/contacto" className="lg:px-3 block py-3 lg:py-0 hover:text-gray-600 align-middle text-lg">
                                 Contacto
-                            </a>
+                            </Link>
                         </div>
                         <div className="lg:flex">
                             <span className="hidden lg:flex lg:px-3" onClick={this.props.openSearch}>
@@ -56,9 +57,9 @@ class Menu extends Component {
                             <span className="hidden lg:flex lg:px-3">
                                 <ShoppingOutlined onClick={this.props.openCart} className="my-auto" />
                             </span>
-                            <a href="/acceder" className="block lg:flex lg:px-3 py-3 lg:py-0 align-middle text-lg">
+                            <Link to="/acceder" className="block lg:flex lg:px-3 py-3 lg:py-0 align-middle text-lg">
                                 Acceder
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

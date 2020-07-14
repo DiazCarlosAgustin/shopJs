@@ -1,8 +1,17 @@
 import React from 'react';
 import './Styles/app.css'
+import './Styles/index.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 import Menu from './componentes/menu/Menu'
 import Buscar from './componentes/buscar/Buscar'
 import Carrito from './componentes/carrito/Carrito'
+
+import Home from './Paginas/Home/Home'
+import Acceder from './Paginas/Acceder/Acceder'
+import Registrarse from './Paginas/Registrarse/Registrarse'
+import Tienda from './Paginas/Tienda/Tienda'
+import Contacto from './Paginas/Contacto/Contacto'
 
 class App extends React.Component {
   constructor(props) {
@@ -52,13 +61,25 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <header>
+      <Router>
+        <header className="relative w-full">
           <Menu openSearch={this.openSearch} openCart={this.openCart} isOpen={this.state.isOpen} openMenu={this.openMenu} />
           <Buscar isSearchOpen={this.state.isSearchOpen} />
           <Carrito isOpenCart={this.state.isOpenCart} />
         </header>
-      </div>
+        <div className="bg-gray-100">
+          <Switch>
+            <Route path="/" exact component={ Home } />
+            <Route path="/acceder" component={ Acceder } />
+            <Route path="/registrarse" component={ Registrarse } />
+            <Route path="/Tienda" component={ Tienda } />
+            <Route path="/Contacto" component={ Contacto } />
+          </Switch>
+        </div>
+        <footer className="py-4 bg-gray-200 text-center">
+          <h1>Derechos reservados 2020</h1>
+        </footer>
+      </Router>
     );
   }
 }

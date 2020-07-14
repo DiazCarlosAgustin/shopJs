@@ -7,7 +7,7 @@ class Carrito extends Component {
     }
     render() {
         return (
-            <div className={"max-w-xs bg-white ml-auto shadow-lg overflow-hidden ease-in-out " + (this.props.isOpenCart ? 'block' : 'hidden')} style={{ height: 'calc(100vh - 100px)' }}>
+            <div className={"bg-white right-0 shadow-lg absolute transition ease-in-out duration-700 " + (this.props.isOpenCart ? 'block' : 'hidden')} style={{ height: 'calc(100vh - 100px)', width: '300px' }}>
                 <div className="pt-3  flex justify-center">
                     <h2 className="text-gray-800 text-lg ">Mi carrito</h2>
                 </div>
