@@ -15,7 +15,7 @@ class Registrarse extends Component {
     }
     render() {
         return (
-            <div className="h-full w-full">
+            <div className="h-full w-full pt-20">
                 <section className="w-full h-full flex justify-center pt-10">
                     <div className="w-full mx-auto">
                         <h1 className="text-4xl mb-5 w-full text-center font-bold text-gray-700">Registrarse</h1>

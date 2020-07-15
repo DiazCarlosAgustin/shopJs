@@ -7,7 +7,7 @@ class Contacto extends Component {
     }
     render() {
         return (
-            <div className="container mx-auto">
+            <div className="container mx-auto pt-20">
                 <section className="w-full h-full py-10">
                     <h1 className="text-4xl text-gray-700 font-bold text-center mb-5">Contacto</h1>
                     <div className="flex justify-center">

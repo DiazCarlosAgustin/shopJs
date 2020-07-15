@@ -69,7 +69,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <section className="w-full h-full ">
+                <section className="w-full h-full">
                     <div className="w-full bg-fixed bg-center bg-cover text-white"
                         style={{
                             height: '100vh',
@@ -78,11 +78,11 @@ class Home extends Component {
                     >
                     </div>
                 </section>
-                <section className="w-full h-full mt-6 my-4">
+                <section className="w-full h-full mt-6 my-4 container mx-auto">
                     <h1 className="text-4xl mb-5 w-full text-center font-bold text-gray-800">Categoria</h1>
                     <Categorias categorias={this.state.categoria} />
                 </section>
-                <section className="w-full h-full mt-6 my-4">
+                <section className="w-full h-full mt-6 py-4 container mx-auto">
                     <h1 className="text-4xl mb-5 w-full text-center font-bold text-gray-800">Destacados</h1>
                     <Productos productos={this.state.productos} />
                 </section>

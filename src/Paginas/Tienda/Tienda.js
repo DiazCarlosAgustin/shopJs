@@ -62,14 +62,14 @@ class Tienda extends Component {
     }
     render() {
         return (
-            <div className="w-full h-full">
+            <div className="w-full h-full pt-20">
                 <div className="flex justify-center pt-10">
                     <h1 className="font-bold text-4xl text-gray-700 mb-5">Tienda</h1>
                 </div>
                 <div>
                     <FiltroTienda />
                 </div>
-                <section className="w-full h-full mt-6 my-4 mx-autos">
+                <section className="w-full h-full mt-6 py-4 container mx-auto">
                     <Producto productos={this.state.productos} />
                 </section>
             </div>

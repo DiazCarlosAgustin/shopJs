@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <header className="relative w-full">
+        <header className="w-full fixed">
           <Menu openSearch={this.openSearch} openCart={this.openCart} isOpen={this.state.isOpen} openMenu={this.openMenu} />
           <Buscar isSearchOpen={this.state.isSearchOpen} />
           <Carrito isOpenCart={this.state.isOpenCart} />
