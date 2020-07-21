@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ItemCarrito from './itemCarrito'
+import { CloseOutlined } from '@ant-design/icons'
 
 class Carrito extends Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class Carrito extends Component {
                 {
                     id: 3,
                     producto: {
-                        id:1,
+                        id: 1,
                         nombre: 'Producto 1',
                         precio: 900
                     },
@@ -60,12 +61,13 @@ class Carrito extends Component {
     }
     render() {
         return (
-            <div className={"bg-white w-full right-0 shadow-lg absolute transition ease-in-out duration-700 max-w-xs sm:max-w-sm  h-screen " + (this.props.isOpenCart ? 'block' : 'hidden')}>
-                <div className="pt-3  flex justify-center">
-                    <h2 className="text-gray-800 text-lg ">Mi carrito</h2>
+            <div className={"bg-white fixed w-full right-0 shadow-lg transition ease-in-out duration-700 max-w-xs sm:max-w-sm  h-screen " + (this.props.isOpenCart ? 'block' : 'hidden')}>
+                <div className="px-3 py-4  flex justify-between">
+                    <h2 className="text-gray-800 text-xl ">Mi carrito</h2>
+                    <CloseOutlined className="text-xl my-auto" onClick={this.props.openCart} />
                 </div>
                 <br />
-                <div className="p-2 flex justify-center overflow-y-auto relative" style={{height:'55%'}}>
+                <div className="p-2 flex justify-center overflow-y-auto relative" style={{ height: '65%' }}>
                     <div className={this.state.items.length < 0 ? 'block' : 'hidden'}>
                         <p className="text-gray-600 text-lg ">No hay elementos.</p>
                     </div>
@@ -77,7 +79,7 @@ class Carrito extends Component {
                         }
                     </div>
                 </div>
-                <div className="absolute top-auto w-full">
+                <div className="absolute bottom-0 w-full p-4">
                     <div className="p-3 my-auto">
                         <span className="w-full h-full text-lg text-gray-700">
                             SubTotal:

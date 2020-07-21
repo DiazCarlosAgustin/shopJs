@@ -6,9 +6,6 @@ class ItemCarrito extends Component {
         super(props);
         this.state = {};
     }
-    componentDidMount() {
-        console.log(this.props.item)
-    }
     render() {
         return (
             <div className="w-full block">
@@ -36,7 +33,7 @@ class ItemCarrito extends Component {
                         </div>
                     </div>
                 </div>
-                <sapn className="border block w-100"></sapn>
+                <span className="border block w-100"></span>
             </div>
         );
     }

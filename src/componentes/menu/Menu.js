@@ -14,7 +14,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <nav className="flex items-center justify-between flex-wrap bg-white p-6 shadow-md">
+            <nav className="flex items-center justify-between flex-wrap bg-white p-6 shadow-md fixed w-full">
                 <div className="flex items-center flex-shrink-0 text-gray-800 mr-6">
                     <span className="font-semibold text-xl tracking-tight">Shop!</span>
                 </div>

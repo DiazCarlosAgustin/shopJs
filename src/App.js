@@ -12,6 +12,7 @@ import Acceder from './Paginas/Acceder/Acceder'
 import Registrarse from './Paginas/Registrarse/Registrarse'
 import Tienda from './Paginas/Tienda/Tienda'
 import Contacto from './Paginas/Contacto/Contacto'
+import Producto from './Paginas/Producto/Producto';
 
 class App extends React.Component {
   constructor(props) {
@@ -62,18 +63,22 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <header className="w-full fixed">
-          <Menu openSearch={this.openSearch} openCart={this.openCart} isOpen={this.state.isOpen} openMenu={this.openMenu} />
+        <header className="w-full relative">
+          <Menu openSearch={this.openSearch}
+            openCart={this.openCart}
+            isOpen={this.state.isOpen}
+            openMenu={this.openMenu} />
           <Buscar isSearchOpen={this.state.isSearchOpen} />
-          <Carrito isOpenCart={this.state.isOpenCart} />
+          <Carrito isOpenCart={this.state.isOpenCart} openCart={this.openCart}/>
         </header>
         <div className="bg-gray-100">
           <Switch>
-            <Route path="/" exact component={ Home } />
-            <Route path="/acceder" component={ Acceder } />
-            <Route path="/registrarse" component={ Registrarse } />
-            <Route path="/Tienda" component={ Tienda } />
-            <Route path="/Contacto" component={ Contacto } />
+            <Route path="/" exact component={Home} />
+            <Route path="/acceder" component={Acceder} />
+            <Route path="/registrarse" component={Registrarse} />
+            <Route path="/Tienda" component={Tienda} />
+            <Route path="/Contacto" component={Contacto} />
+            <Route path="/producto" component={Producto} />
           </Switch>
         </div>
         <footer className="py-4 bg-gray-200 text-center">
